@@ -33,6 +33,12 @@ class Dog
     def bark
         puts "Woof Woof!!!"
     end
+
+    private
+
+    def welcome
+        puts "Hey there!!"
+    end
 end
 
 dog1 = Dog.new("Bosco", "Chihuahua", 40)
