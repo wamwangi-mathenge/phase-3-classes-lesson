@@ -15,6 +15,7 @@ class Dog
 
     def testself
         bark
+        welcome
     end
 
     # Returns the class Dog
