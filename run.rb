@@ -3,6 +3,7 @@ require 'pry'
 class Dog
 
     attr_accessor :name, :breed, :age
+    attr_reader :barks
 
     @@alldogs = 0
 
@@ -10,6 +11,7 @@ class Dog
         @name = name
         @breed = breed
         @age = age
+        @barks = 0
         @@alldogs += 1
     end
 
@@ -33,12 +35,18 @@ class Dog
 
     def bark
         puts "Woof Woof!!!"
+        totalbarks
     end
 
     private
 
     def welcome
         puts "Hey there!!"
+    end
+
+    def totalbarks
+        @barks += 1
+        puts "Total number of barks is #{@barks}"
     end
 end
 
