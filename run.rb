@@ -5,14 +5,18 @@ class Dog
     attr_accessor :name, :breed, :age
     attr_reader :barks
 
-    @@alldogs = 0
+    @@allDogs = 0
 
     def initialize(name, breed, age)
         @name = name
         @breed = breed
         @age = age
         @barks = 0
-        @@alldogs += 1
+        @@allDogs += 1
+    end
+
+    def self.showalldogs
+        @@allDogs
     end
 
     def testself
@@ -48,9 +52,12 @@ class Dog
         @barks += 1
         puts "Total number of barks is #{@barks}"
     end
+
 end
 
+
+
 dog1 = Dog.new("Bosco", "Chihuahua", 40)
-dog2 = Dog.new("Snoopy", "GS", 15)
+# dog2 = Dog.new("Snoopy", "GS", 15)
 
 binding.pry
